@@ -9,31 +9,25 @@ module GreetingInclude
     klass.include(InstanceMethods)
   end
 
-  # included methos caled
+  # included methos called
   module InstanceMethods
-
     def hello
      p "Hello ruby do thr module"
     end
-
     def by
       p "OK we on ethe  moduel"
     end
-
   end
-
+ # class method called
   module ClassMethod
-
     def wrork_class_method
       p "inside the greeting class method"
     end
-
   end
 
 end
 
 module GreetingExtend
-
    def self.extended(klass)
      klass.include(InstanceMethods)
    end
